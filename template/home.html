@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Convertisseur Go</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <form action="/convertir" method="POST">
+        <p>Valeur : <input type="number" step="any" name="valeur" required></p>
+
+        <p>De : 
+            <select name="source">
+                {{range .Units}}<option value="{{.}}">{{.}}</option>{{end}}
+            </select>
+        </p>
+
+        <p>Vers : 
+            <select name="cible">
+                {{range .Units}}<option value="{{.}}">{{.}}</option>{{end}}
+            </select>
+        </p>
+
+        <button type="submit">Calculer</button>
+    </form>
+
+    {{if .Resultat}}
+        <p><strong>Résultat :</strong> {{.Resultat}}</p>
+    {{end}}
+</body>
+</html>

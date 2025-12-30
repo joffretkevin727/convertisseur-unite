@@ -1,0 +1,64 @@
+/* Définit une police sans-serif et centre le contenu */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    color: #333;
+}
+/* Style du conteneur du formulaire */
+form {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+/* Espacement des éléments */
+p {
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+/* Style des champs numériques et menus */
+input[type="number"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* Évite que le champ ne dépasse */
+}
+/* Style du bouton */
+button {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+button:hover {
+    background-color: #0056b3;
+}
+/* Style des résultats et erreurs */
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background: #e7f3ff;
+    color: #004085;
+    border: 1px solid #b8daff;
+    text-align: center;
+}
+.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
